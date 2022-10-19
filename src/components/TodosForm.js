@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 function TodosForm(props) {
     const [input, setInput] = useState(props.edit ? props.edit.text : '');
+    const inputRef = useRef(null);
 
+    useEffect(() => {
+        inputRef.current.focus();
+    });
     const handleChange = e => {
         setInput(e.target.value);
 
@@ -24,26 +28,28 @@ function TodosForm(props) {
             {props.edit ?
                 (
                     <>
-                    <input
-                        className="input-area-edit"
-                        type="text"
-                        placeholder="Add Todo"
-                        value={input}
-                        name='text'
-                        onChange={handleChange} />
-                    <button>Update</button>
+                        <input
+                            className="input-area-edit"
+                            type="text"
+                            placeholder="Add Todo"
+                            value={input}
+                            name='text'
+                            ref={inputRef}
+                            onChange={handleChange} />
+                        <button>Update</button>
                     </>
                 ) :
                 (
                     <>
-                    <input
-                        className="input-area"
-                        type="text"
-                        placeholder="Add Todo"
-                        value={input}
-                        name='text'
-                        onChange={handleChange} />
-                    <button>Add</button>
+                        <input
+                            className="input-area"
+                            type="text"
+                            placeholder="Add Todo"
+                            value={input}
+                            name='text'
+                            ref={inputRef}
+                            onChange={handleChange} />
+                        <button>Add</button>
                     </>
                 )
             }

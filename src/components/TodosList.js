@@ -20,7 +20,7 @@ function TodosList() {
     const completedTodo = id => {
         let updateTodo = todos.map(todo => {
             if (todo.id === id) {
-                todo.completed = !todo.completed;
+                todo.isComplete = !todo.isComplete;
             }
             return todo;
         })

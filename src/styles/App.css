@@ -51,21 +51,40 @@
   color: #000000;
 }
 
-.text-icon-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+.todo-text {
   border: 1px solid #FFFFFF;
   border-radius: 10px;
   margin-bottom: 10px;
   padding: 5px 5px;
 }
 
-.text {
+.text-uncomplete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   font-size: 1.6rem;
-  padding: 5px 0;
-  margin-left: 1.2rem;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+}
+
+.text-complete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  text-decoration: line-through;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+  
+}
+.text {
+  margin-left: 10px;
 }
 
 .icon {
