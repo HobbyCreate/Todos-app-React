@@ -31,7 +31,7 @@ function TodosForm(props) {
                         <input
                             className="input-area-edit"
                             type="text"
-                            placeholder="Add Todo"
+                            placeholder="Edit Todo"
                             value={input}
                             name='text'
                             ref={inputRef}
